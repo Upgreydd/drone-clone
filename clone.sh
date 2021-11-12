@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 rm -rf ./*
 if [[ -n "$REMOTE" ]] && [[ -n "$VERSION" ]] ; then
   git clone --single-branch --branch "${VERSION:-${DRONE_BRANCH}}" https://github.com/"${REMOTE:-${DRONE_REPO_NAMESPACE}}"/"${DRONE_REPO_NAME}".git .
